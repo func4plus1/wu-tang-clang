@@ -24,4 +24,4 @@ WORKDIR $WORKSPACE
 COPY .vimrc ${WORKSPACE}/.vimrc 
 COPY plug.vim ${WORKSPACE}/.vim/autoload/plug.vim
 
-CMD ["zsh", "-c", "source $HOME/.cargo/env"]
+CMD ["zsh"]
