@@ -14,7 +14,6 @@ Plug 'flazz/vim-colorschemes'
 call plug#end()
 
 syntax on 
-colors molokai 
 
 
 set number              " show line numbers
