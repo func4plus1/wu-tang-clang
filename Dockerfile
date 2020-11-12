@@ -9,7 +9,8 @@ RUN apk add \
 	curl \
 	clang \
 	clang-extra-tools \
-	zsh 
+	zsh \
+	cmake
 	
 
 RUN git config --global user.name "John Doe"
@@ -25,5 +26,8 @@ COPY .vimrc ${WORKSPACE}/.vimrc
 COPY plug.vim ${WORKSPACE}/.vim/autoload/plug.vim
 
 RUN vim +PlugInstall +qall 
+
+RUN wget https://download.pytorch.org/libtorch/nightly/cpu/libtorch-shared-with-deps-latest.zip && unzip libtorch-shared-with-deps-latest.zip
+
 
 CMD ["zsh"]
