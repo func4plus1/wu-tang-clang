@@ -25,6 +25,6 @@ RUN vim +PlugInstall +qall
 
 RUN wget https://download.pytorch.org/libtorch/nightly/cpu/libtorch-shared-with-deps-latest.zip && unzip libtorch-shared-with-deps-latest.zip
 
-RUN wget https://github.com/clangd/clangd/releases/download/11.0.0/clangd-linux-11.0.0.zip && unzip clangd-linux-11.0.0.zip &&  echo export PATH="$HOME/bin:$PATH"  >> ~/.zshrc && /bin/bash -c 'source  ~/.zshrc'
+RUN wget https://github.com/clangd/clangd/releases/download/11.0.0/clangd-linux-11.0.0.zip && unzip clangd-linux-11.0.0.zip &&  echo export PATH="/root/clangd_11.0.0/bin:$PATH"  >> ~/.zshrc && /bin/bash -c 'source  ~/.zshrc'
 
 CMD ["zsh"]
